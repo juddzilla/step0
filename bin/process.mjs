@@ -18,9 +18,11 @@ if (!workspace) {
 }
 
 if (Object.hasOwn(argv, 'react')) {
+  console.log(100);
   Install([...commands, ...React.Dependencies]);
   Install([...commands, '-D', ...React.DevDependencies]);
 } else {
+  console.log(200);
   Install([...commands, '-D', ...DevDependencies]);
 }
 
