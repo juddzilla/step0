@@ -4,5 +4,7 @@ import React from '../src/react/index.js';
 
 const { Dependencies, DevDependencies } = React;
 
-Install(['add', ...Dependencies])
-Install(['add', '-D', ...DevDependencies]);
+console.log('React', React);
+console.log('ARGV', process.argv);
+// Install(['add', ...Dependencies])
+// Install(['add', '-D', ...DevDependencies]);
