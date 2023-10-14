@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import { spawn }  from 'child_process';
-import Deps from '../src/devDependencies/index.js';
 
 export default function(command) {
   const exec = spawn('yarn', command);

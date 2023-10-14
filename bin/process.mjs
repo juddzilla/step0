@@ -2,14 +2,18 @@
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
 
-import Install from './install.mjs';
+import Install from './install.js';
 import DevDependencies from '../src/devDependencies/index.js';
 import React from '../src/react/index.js';
 
 const argv = yargs(hideBin(process.argv)).argv;
 
-const commands = ['add'];
+console.log('argv', argv);
 const workspace = argv.workspace;
+console.log('workspace', workspace);
+return;
+
+const commands = ['add'];
 
 if (!workspace) {
   commands.push('-W');
