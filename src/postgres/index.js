@@ -1,10 +1,8 @@
 export default {
   dependencies: [
-    'react',
-    'react-dom',
-
-    'redux',
-    'react-redux'
+    'node-pg-migrate',
+    'pg',
+    'pg-camelcase',
   ],
   devDependencies: []
 }
