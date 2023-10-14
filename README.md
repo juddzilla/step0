@@ -2,11 +2,15 @@
 
 Install oft used dev deps with one npx command
 
+** Please note, this is a yarn installer **
+
 ## Usage
 
-From the root of the git repository
+From the root of the git repository, run the below commands
 
-`npx github:juddzilla/step0 install`
+### Dev Dependencies 
+
+`npx github:juddzilla/step0 devDependencies`
 
 The above script will install the packages listed in the files in the 'devDependencies' directory
 

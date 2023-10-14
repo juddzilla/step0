@@ -11,7 +11,8 @@
   },
   "type": "module",
   "dependencies": {
-    "glob": "^10.3.10"
+    "glob": "^10.3.10",
+    "yargs": "^17.7.2"
   },
   "bin": {
     "devDependencies": "bin/devDependencies.mjs",
