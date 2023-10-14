@@ -3,6 +3,7 @@ import { glob } from 'glob';
 import path from 'path';
 
 const find = async (dirPath) => {
+  console.log('dirPath', dirPath);
   try {
     return await glob.sync(dirPath, { nocase: true });
   } catch (err) {
