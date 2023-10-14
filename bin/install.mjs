@@ -2,7 +2,7 @@
 import { spawn }  from 'child_process';
 // import { glob } from 'glob';
 // import path from 'path';
-import Deps from './devDependencies';
+import Deps from './devDependencies/index.js';
 
 // const find = async (dirPath) => {
 //   console.log('dirPath', dirPath);
