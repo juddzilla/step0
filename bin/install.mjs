@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 import { spawn }  from 'child_process';
-import { glob } from 'glob';
-import path from 'path';
+// import { glob } from 'glob';
+// import path from 'path';
+import Deps from './devDependencies';
 
-const find = async (dirPath) => {
-  console.log('dirPath', dirPath);
-  try {
-    return await glob.sync(dirPath, { nocase: true });
-  } catch (err) {
-    console.warn('find files err', err);
-    return `Find files error: ${err}`;
-  }
-};
+// const find = async (dirPath) => {
+//   console.log('dirPath', dirPath);
+//   try {
+//     return await glob.sync(dirPath, { nocase: true });
+//   } catch (err) {
+//     console.warn('find files err', err);
+//     return `Find files error: ${err}`;
+//   }
+// };
 
 function execute(command) {
   const exec = spawn('yarn', command);
@@ -29,16 +30,18 @@ function execute(command) {
   });
 }
 
-(async function() {
-  const devDeps = path.join('./devDependencies', '*.js');
-  const files = await find(devDeps);
+// (async function() {
+//   const devDeps = path.join('./devDependencies', '*.js');
+//   const files = await find(devDeps);
+//
+//   let packages = [];
+//   await Promise.all(files.map(async (file) => {
+//     const dep = await import(file);
+//
+//     packages = [...packages, ...dep.default];
+//   }));
+//
+//
+// })()
 
-  let packages = [];
-  await Promise.all(files.map(async (file) => {
-    const dep = await import(file);
-
-    packages = [...packages, ...dep.default];
-  }));
-
-  execute(['add', '-WD', ...packages]);
-})()
+execute(['add', '-WD', ...Deps]);
