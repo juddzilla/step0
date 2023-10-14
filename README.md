@@ -4,6 +4,8 @@ Install oft used dev deps with one npx command
 
 ## Usage
 
+From the root of the git repository
+
 `npx github:juddzilla/step0 install`
 
 The above script will install the packages listed in the files in the 'devDependencies' directory
