@@ -2,7 +2,7 @@
   "name": "step0",
   "version": "1.0.0",
   "description": "hotplating",
-  "main": "installation-runner.js",
+  "main": "index.js",
   "author": "Judd Hendrix <juddhendrix@gmail.com>",
   "license": "MIT",
   "private": false,
