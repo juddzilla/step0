@@ -15,7 +15,6 @@
     "yargs": "^17.7.2"
   },
   "bin": {
-    "devDependencies": "bin/devDependencies.mjs",
-    "react": "bin/react.mjs"
+    "devDependencies": "bin/devDependencies.mjs"
   }
 }
