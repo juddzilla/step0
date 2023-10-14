@@ -6,13 +6,17 @@ Install oft used dev deps with one npx command
 
 ## Usage
 
-From the root of the git repository, run the below commands
+From the root of the git repository, run the below command
 
-### Dev Dependencies 
+`npx github:juddzilla/step0 install`
 
-`npx github:juddzilla/step0 devDependencies`
+### Available Flags
 
-The above script will install the packages listed in the files in the 'devDependencies' directory
+- `--workspace <workspace name>`
+- `--react`
+- `--postgres`
+
+If no flag is provided, the default installation are the 'devDependencies' at the root of the git repo
 
 ## References
 
