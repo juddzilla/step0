@@ -12,14 +12,16 @@ console.log('argv', argv);
 const workspace = argv.workspace;
 console.log('workspace', workspace);
 // return;
-//
-// const commands = ['add'];
-//
-// if (!workspace) {
-//   commands.push('-W');
-// } else {
-//   commands.push('workspace', workspace);
-// }
+
+const commands = ['add'];
+
+if (!workspace) {
+  commands.push('-W');
+} else {
+  commands.push('workspace', workspace);
+}
+
+console.log('commands', commands);
 //
 // if (Object.hasOwn(argv, 'react')) {
 //   console.log(100);
