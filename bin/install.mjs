@@ -30,7 +30,7 @@ function execute(command) {
 }
 
 (async function() {
-  const devDeps = path.join(process.cwd(), '../devDependencies', '*.js');
+  const devDeps = path.join('./devDependencies', '*.js');
   const files = await find(devDeps);
 
   let packages = [];
