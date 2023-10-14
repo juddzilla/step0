@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import { spawn }  from 'child_process';
-import Deps from './devDependencies/index.js';
+import Deps from '../src/devDependencies/index.js';
 
-function execute(command) {
+export default function(command) {
   const exec = spawn('yarn', command);
 
   exec.stdout.on('data', function (data) {
@@ -17,5 +17,3 @@ function execute(command) {
     console.log('child process exited with code ' + code.toString());
   });
 }
-
-execute(['add', '-WD', ...Deps]);
