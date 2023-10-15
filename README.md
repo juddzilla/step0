@@ -13,17 +13,16 @@ From the root of the git repository, run the below command
 ### Available Flags
 
 - `--workspace <workspace name>`
-- `--react`
-- `--postgres`
+- `--suite <suite name>`
 
 If no flag is provided, the default installation are the 'devDependencies' at the root of the git repo
 
 ### Examples
 
-`$ npx github:juddzilla/step0 install --react --workspace Web-Client`
+`$ npx github:juddzilla/step0 install --type react --workspace Web-Client`
 Installs the React dependencies in the Web-Client workspace.
 
-`$ npx github:juddzilla/step0 install --postgres --workspace Database-Library`
+`$ npx github:juddzilla/step0 install --type postgres --workspace Database-Library`
 Installs the Postgres dependencies in the Database-Library workspace
 
 `$ npx github:juddzilla/step0 install`

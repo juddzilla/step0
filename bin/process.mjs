@@ -2,10 +2,11 @@
 import yargs from 'yargs/yargs';
 import { hideBin } from 'yargs/helpers';
 
-import Install from './install.js';
+import Install from '../src/install.js';
 import DevDependencies from '../src/devDependencies/index.js';
-import React from '../src/react/index.js';
+import Fastify from '../src/fastify/index.js';
 import Postgres from '../src/postgres/index.js';
+import React from '../src/react/index.js';
 
 const argv = yargs(hideBin(process.argv)).argv;
 
@@ -20,11 +21,23 @@ if (!workspace) {
 
 commands.push('add');
 
-if (Object.hasOwn(argv, 'postgres')) {
-  Install([...commands, ...Postgres.dependencies]);
-} else if (Object.hasOwn(argv, 'react')) {
-  Install([...commands, ...React.dependencies]);
-  Install([...commands, '-D', ...React.devDependencies]);
+const map = {
+  fastify: Fastify,
+  postgres: Postgres,
+  react: React,
+};
+
+if (Object.hasOwn(argv, 'suite') && Object.hasOwn(map, argv.suite)) {
+  const mapping = map[argv.suite];
+
+  if (mapping.dependencies) {
+    Install([...commands, ...mapping.dependencies]);
+  }
+
+  if (mapping.devDependencies) {
+    Install([...commands, '-D', ...mapping.devDependencies]);
+  }
+
 } else {
   Install([...commands, '-D', ...DevDependencies]);
 }
