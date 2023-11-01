@@ -3,9 +3,17 @@ export default {
     'react',
     'react-dom',
     'react-router-dom',
-
-    'redux',
-    'react-redux'
   ],
-  devDependencies: []
+  devDependencies: [
+      '@types/react',
+      '@types/react-dom',
+      '@vitejs/plugin-react',
+      'eslint',
+      'eslint-plugin-react',
+      'eslint-plugin-react-hooks',
+      'eslint-plugin-react-refresh',
+      'nodemon',
+      'vite',
+      'vite-plugin-html-config'
+  ]
 }
