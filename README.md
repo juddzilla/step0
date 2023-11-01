@@ -19,10 +19,10 @@ If no flag is provided, the default installation are the 'devDependencies' at th
 
 ### Examples
 
-`$ npx github:juddzilla/step0 install --type react --workspace Web-Client`
+`$ npx github:juddzilla/step0 install --suite react --workspace Web-Client`
 Installs the React dependencies in the Web-Client workspace.
 
-`$ npx github:juddzilla/step0 install --type postgres --workspace Database-Library`
+`$ npx github:juddzilla/step0 install --suite postgres --workspace Database-Library`
 Installs the Postgres dependencies in the Database-Library workspace
 
 `$ npx github:juddzilla/step0 install`

@@ -6,6 +6,7 @@ import Install from '../src/install.js';
 import DevDependencies from '../src/devDependencies/index.js';
 import Fastify from '../src/fastify/index.js';
 import Postgres from '../src/postgres/index.js';
+import Postcss from '../src/postcss/index.js';
 import React from '../src/react/index.js';
 
 const argv = yargs(hideBin(process.argv)).argv;
@@ -24,6 +25,7 @@ commands.push('add');
 const map = {
   fastify: Fastify,
   postgres: Postgres,
+  postcss: Postcss,
   react: React,
 };
 
